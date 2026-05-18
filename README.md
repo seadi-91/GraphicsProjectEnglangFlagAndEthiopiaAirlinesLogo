@@ -45,9 +45,12 @@ It includes two main parts:
 3. Use the keyboard controls listed above to interact with the scenes.
 Sample for Screen Shoot
 Sample1                                                   Sample
-![UK Flag Screen](assest/flag1.png)
-<img src="assest/flag1.png" width="300">
+<img src="assest/flag1.png" width="300">                 <img src="assest/flag2.png" width="300">
+<img src="assest/flag3.png" width="300">                  <img src="assest/flag4.png" width="300">
 Screenshot Sample for Logo
+
+<img src="assest/logo1.png" width="300">               <img src="assest/logo3.png" width="300">
+<img src="assest/logo2.png" width="300">               <img src="assest/logo4.png" width="300">
 
 
 
@@ -58,9 +61,9 @@ Name                      ID
 Ashenafi Guadie                 02130/16
 Bezawit Bekele                  01106/16
 Hawlet   Hussen                 02850/16
-Ruth Mesfin                       01689/16
-Sada  Murad                       02912/16
-Kalkidan Ayalew              02775/16
+Ruth Mesfin                     01689/16
+Sada  Murad                     02912/16
+Kalkidan Ayalew                 02775/16
 
 
 
