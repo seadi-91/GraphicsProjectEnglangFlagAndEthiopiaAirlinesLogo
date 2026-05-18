@@ -113,29 +113,3 @@ void display() {
 
     glutSwapBuffers();
 }
-
-void keyboard(unsigned char key, int x, int y) {
-    float flagH = 1.28f * flagSizeY;
-    switch (key) {
-        case 'r': case 'R': if (tx > LEFT_LIMIT) tx -= 0.2f; break;
-        case 'l': case 'L': if (tx < RIGHT_LIMIT) tx += 0.2f; break;
-        case 't': case 'T': if (flagYOffset < 0.0f) { flagYOffset += 0.1f; if (flagYOffset > 0.0f) flagYOffset = 0.0f; } break;
-        case 'd': case 'D': if ((4.3f + flagYOffset - flagH) > -2.15f) { flagYOffset -= 0.1f; } break;
-        case '+': case '=': if (flagSizeX < MAX_SCALE) { flagSizeX += 0.05f; flagSizeY += 0.05f; poleThickness += 0.01f; coneRadius += 0.01f; } break;
-        case '-': case '_': if (flagSizeX > MIN_SCALE) { flagSizeX -= 0.05f; flagSizeY -= 0.05f; poleThickness -= 0.01f; coneRadius -= 0.01f; } break;
-        case 27: exit(0); break;
-    }
-    glutPostRedisplay();
-}
-
-int main(int argc, char** argv) {
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-    glutInitWindowSize(800, 600);
-    glutCreateWindow("Flag Scene - No Right Border");
-    init();
-    glutDisplayFunc(display);
-    glutKeyboardFunc(keyboard);
-    glutMainLoop();
-    return 0;
-}
