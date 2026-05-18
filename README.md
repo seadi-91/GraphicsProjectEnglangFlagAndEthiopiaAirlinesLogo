@@ -45,7 +45,7 @@ It includes two main parts:
 3. Use the keyboard controls listed above to interact with the scenes.
 Sample for Screen Shoot
 Sample1                                                   Sample
-
+![UK Flag Screen](assest/flag1.png)
 Screenshot Sample for Logo
 
 
