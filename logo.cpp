@@ -83,3 +83,59 @@ void drawTessellatedShape(GLUtesselator *tobj, const std::vector<std::vector<Poi
     }
     gluTessEndPolygon(tobj);
 }
+void display() {
+    glClear(GL_COLOR_BUFFER_BIT);
+    glLoadIdentity();
+    glTranslatef(locX, locY, 0.0f);
+    glTranslatef(12.5f + translateX, 12.5f + translateY, 0.0f);
+    glRotatef(rotationAngle, 0.0f, 0.0f, 1.0f);
+    glScalef(scaleFactor, scaleFactor, 1.0f);
+    glTranslatef(-12.5f, -12.5f, 0.0f);
+
+    GLUtesselator* tobj = gluNewTess();
+    gluTessCallback(tobj, GLU_TESS_BEGIN, (void (CALLBACK *)())tessBeginCB);
+    gluTessCallback(tobj, GLU_TESS_END, (void (CALLBACK *)())tessEndCB);
+    gluTessCallback(tobj, GLU_TESS_VERTEX, (void (CALLBACK *)())tessVertexCB);
+
+    glColor3f(15/255.0, 139/255.0, 49/255.0); drawTessellatedShape(tobj, contour1);
+    glColor3f(249/255.0, 178/255.0, 17/255.0); drawTessellatedShape(tobj, contour2);
+    glColor3f(225/255.0, 28/255.0, 46/255.0); drawTessellatedShape(tobj, contour3);
+
+    gluDeleteTess(tobj);
+    glutSwapBuffers();
+}
+
+void keyboardKeys(unsigned char key, int x, int y) {
+    switch (key) {
+        case '+': scaleFactor += 0.1f; break;
+        case '-': scaleFactor -= 0.1f; break;
+        case 'r': rotationAngle += 5.0f; break;
+        case 'w': locY -= 0.5f; break;
+        case 's': locY += 0.5f; break;
+        case 'a': locX -= 0.5f; break;
+        case 'd': locX += 0.5f; break;
+    }
+    glutPostRedisplay();
+}
+
+void init() {
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluOrtho2D(-5.0, 30.0, 30.0, -5.0);
+    glMatrixMode(GL_MODELVIEW);
+    buildLogoGeometry();
+    buildRemainingGeometry();
+}
+
+int main(int argc, char** argv) {
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+    glutInitWindowSize(700, 500);
+    glutCreateWindow("Ethiopian Airlines Logo");
+    init();
+    glutDisplayFunc(display);
+    glutKeyboardFunc(keyboardKeys);
+    glutMainLoop();
+    return 0;
+}
