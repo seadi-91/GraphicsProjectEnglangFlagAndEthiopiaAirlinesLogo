@@ -46,6 +46,7 @@ It includes two main parts:
 Sample for Screen Shoot
 Sample1                                                   Sample
 ![UK Flag Screen](assest/flag1.png)
+<img src="assest/flag1.png" width="300">
 Screenshot Sample for Logo
 
 
@@ -67,12 +68,4 @@ Kalkidan Ayalew              02775/16
 
 
 
-## Images
 
-![image0.wmf](images/image0.wmf)
-![image1.wmf](images/image1.wmf)
-![image2.wmf](images/image2.wmf)
-![image3.wmf](images/image3.wmf)
-![image4.wmf](images/image4.wmf)
-![image5.wmf](images/image5.wmf)
-![image6.wmf](images/image6.wmf)
