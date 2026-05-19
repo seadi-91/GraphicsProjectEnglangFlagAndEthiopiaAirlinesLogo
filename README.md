@@ -57,15 +57,18 @@ Screenshot Sample for Logo
 ## Conclusion
 This project showcases **interactive graphics programming** with OpenGL, combining both **3D flag rendering** and **2D logo tessellation**. It demonstrates transformations (rotation, scaling, translation) and creative use of geometry
 
-Group  Member
 
-Name                |      ID
-Ashenafi Guadie     |   02130/16
-Bezawit Bekele      |   01106/16
-Hawlet   Hussen     |   02850/16
-Ruth Mesfin         |   01689/16
-Sada  Murad         |   02912/16
-Kalkidan Ayalew     |   02775/16
+
+## Group Members
+| Name            | ID        |
+|-----------------|-----------|
+| Ashenafi Guadie | 02130/16  |
+| Bezawit Bekele  | 01106/16  |
+| Hawlet Hussen   | 02850/16  |
+| Ruth Mesfin     | 01689/16  |
+| Sada Murad      | 02912/16  |
+| Kalkidan Ayalew | 02775/16  |
+
 
 
 
