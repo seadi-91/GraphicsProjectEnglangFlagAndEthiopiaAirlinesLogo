@@ -13,10 +13,12 @@ It includes two main parts:
 - **Flag Movement:**
 - `[T]` → Raise flag
 - `[D]` → Lower flag
+- 
 - **Scaling:**
 - `[+]` → Increase flag and pole size
 - `[-]` → Decrease flag and pole size
 - **Exit:**
+- 
 - `[Esc]` → Quit program
 ### ✈️ Ethiopian Airlines Logo
 - **2D Mode:** Logo rendered with tessellation and Bézier curves.
